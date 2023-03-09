@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="SkipButton" src="project://database/Assets/UI%20Toolkit/Controls/SkipButton.uxml?fileID=9197481963319205126&amp;guid=74c36ec9ecdfe4a41a9f7f4702577270&amp;type=3#SkipButton" />
+    <ui:Template name="Button" src="project://database/Assets/UI%20Toolkit/Controls/Button.uxml?fileID=9197481963319205126&amp;guid=7dba5a8110e87974da3316346c62c5b2&amp;type=3#Button" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/intro-view.uss?fileID=7433441132597879392&amp;guid=22e67510463fa4848a9f27f74e824bba&amp;type=3#intro-view" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/pagenation.uss?fileID=7433441132597879392&amp;guid=d19bb197f2e320743818d573bcba5acc&amp;type=3#pagenation" />
+    <ui:VisualElement name="IntroView" class="intro-view">
+        <ui:VisualElement name="Content" picking-mode="Ignore" class="intro-view__content">
+            <ui:Instance template="SkipButton" name="SkipButton" style="position: absolute; right: 16px; top: 60px;" />
+            <BindableSwipePage name="Container" next-command="NextPageCommand" back-command="PreviousPageCommand" class="intro-view__content-container">
+                <ui:VisualElement name="Icon" picking-mode="Ignore" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Sprites/IntroSprite-First.png?fileID=2800000&amp;guid=b5acb212292ba424f9af9cff97c0a283&amp;type=3#IntroSprite-First&apos;); width: 375px; height: 264px;" />
+                <UnityMvvmToolkit.UITK.BindableUIElements.BindableLabel text="Learn anytime&#10;and anywhere" name="Title" picking-mode="Ignore" style="font-size: 24px; -unity-text-align: middle-center; white-space: normal; -unity-font: url(&apos;project://database/Assets/UI%20Toolkit/Fonts/Rubik-Medium.ttf?fileID=12800000&amp;guid=b2999f9dd8ce56945b0bfbc0673a8c5c&amp;type=3#Rubik-Medium&apos;); -unity-font-definition: none; color: rgb(60, 58, 54); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 16px; margin-right: 16px; letter-spacing: -0.5px; margin-top: 16px;" />
+                <UnityMvvmToolkit.UITK.BindableUIElements.BindableLabel text="Quarantine is the perfect time to spend your&#10; day learning something new, from anywhere!&#10;&#10;" name="BodyText" picking-mode="Ignore" style="margin-top: 8px; font-size: 14px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(120, 116, 109); -unity-font-definition: none; -unity-font: url(&apos;project://database/Assets/UI%20Toolkit/Fonts/Rubik-Regular.ttf?fileID=12800000&amp;guid=31643f4a30592094cbcd6d87153f61ba&amp;type=3#Rubik-Regular&apos;);" />
+            </BindableSwipePage>
+            <BindableElements.BindablePagination amount-of-points="3" next-event="NextPage" previous-event="PreviousPage" name="Pagination" picking-mode="Ignore" binding-active-page-path="CurrentPage" class="pagenation" style="width: 52px;" />
+            <ui:Instance template="Button" name="NextButton" style="position: absolute; bottom: 50px;">
+                <AttributeOverrides element-name="Label" text="Next" />
+                <AttributeOverrides element-name="Button" command="NextPageCommand" />
+            </ui:Instance>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

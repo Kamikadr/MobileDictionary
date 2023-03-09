@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/controls.uss?fileID=7433441132597879392&amp;guid=37bedc4a07c545443bd454d1ba284584&amp;type=3#controls" />
+    <UnityMvvmToolkit.UITK.BindableUIElements.BindableButton name="Button" class="accent-button">
+        <ui:Label text="Button" display-tooltip-when-elided="true" picking-mode="Ignore" name="Label" class="accent-button__label" />
+    </UnityMvvmToolkit.UITK.BindableUIElements.BindableButton>
+</ui:UXML>
