@@ -23,7 +23,7 @@
 .skip-button__label {
     -unity-text-align: middle-right;
     font-size: 14px;
-    color: rgba(120, 116, 109, 255);
+    color: rgb(120, 116, 109);
     -unity-font-definition: none;
     -unity-font: url('project://database/Assets/UI%20Toolkit/Fonts/Rubik-Medium.ttf?fileID=12800000&guid=b2999f9dd8ce56945b0bfbc0673a8c5c&type=3#Rubik-Medium');
 }
@@ -63,4 +63,39 @@
     color: rgb(255, 255, 255);
     -unity-font: url('project://database/Assets/UI%20Toolkit/Fonts/Rubik-Medium.ttf?fileID=12800000&guid=b2999f9dd8ce56945b0bfbc0673a8c5c&type=3#Rubik-Medium');
     -unity-font-definition: none;
+}
+
+.unity-text-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.placeholder {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    right: 16px;
+    bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    -unity-font: url('project://database/Assets/UI%20Toolkit/Fonts/Rubik-Regular.ttf?fileID=12800000&guid=31643f4a30592094cbcd6d87153f61ba&type=3#Rubik-Regular');
+    color: rgba(120, 116, 109, 255);
 }
