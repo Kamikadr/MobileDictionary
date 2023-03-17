@@ -7,7 +7,7 @@ using UnityMvvmToolkit.Core.Interfaces;
 
 namespace ViewModels
 {
-    public class IntroViewModel : ViewModel
+    public class IntroViewModel : BaseViewModel
     {
         private int _currentPage;
 
@@ -16,6 +16,8 @@ namespace ViewModels
             get => _currentPage;
             set => Set(ref _currentPage, value);
         }
+
+        public event EventHandler OnLoginScreen;
          public IntroViewModel() 
         {
             NextPageCommand = new Command(NextPage);

@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Views;
+using ViewModels;
+using Zenject;
 
 public class App : MonoBehaviour
 {
-    [SerializeField] IntroView _introView;
+    private BaseViewModel _activeScreen;
+
+    [Inject] IntroViewModel _introView;
 
 
     private void Awake()
@@ -26,8 +29,13 @@ public class App : MonoBehaviour
         
     }
 
-    private void ShowView(IBaseView view)
+    private void ShowView(BaseViewModel viewModel)
     {
-        view.Show();
+        if(_activeScreen != null)
+        {
+            _activeScreen.Hide();
+        }
+        viewModel.Show();
+        _activeScreen = viewModel;
     }
 }

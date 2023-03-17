@@ -1,24 +1,36 @@
+using System;
 using System.ComponentModel;
+using UnityEngine.UIElements;
 using UnityMvvmToolkit.Core.Interfaces;
 using UnityMvvmToolkit.UITK;
+using ViewModels;
 using Zenject;
 
 namespace Views
 {
-    public abstract class BaseView<TBindingContext> : DocumentView<TBindingContext>, IBaseView
-        where TBindingContext : class, INotifyPropertyChanged
+    public abstract class BaseView<TBindingContext> : DocumentView<TBindingContext>
+        where TBindingContext :  BaseViewModel
     {
         [Inject] private IBindableElementsFactory _bindableElementsFactory;
         [Inject] private TBindingContext _viewModel;
 
-
-        public void Show() 
+        private void OnEnable()
         {
-            gameObject.SetActive(true);
+            BindingContext.OnShow += Show;
+            BindingContext.OnHide += Hide;
         }
-        public void Hide()
+        private void OnDisable()
         {
-            gameObject.SetActive(false);
+            BindingContext.OnShow -= Show;
+            BindingContext.OnHide -= Hide;
+        }
+        private void Show(object sender, EventArgs args) 
+        {
+            RootVisualElement.style.display = DisplayStyle.Flex;
+        }
+        private void Hide(object sender, EventArgs args)
+        {
+            RootVisualElement.style.display = DisplayStyle.None;
         }
         protected override IBindableElementsFactory GetBindableElementsFactory()
         {
