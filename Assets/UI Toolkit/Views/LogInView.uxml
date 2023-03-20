@@ -11,12 +11,16 @@
             <ui:Label text="Sing up" display-tooltip-when-elided="true" name="Title" style="-unity-font: url(&apos;project://database/Assets/UI%20Toolkit/Fonts/Rubik-Regular.ttf?fileID=12800000&amp;guid=31643f4a30592094cbcd6d87153f61ba&amp;type=3#Rubik-Regular&apos;); font-size: 24px; letter-spacing: -5px; -unity-text-align: upper-center; color: rgb(60, 58, 54);" />
             <ui:Label text="Create your account" display-tooltip-when-elided="true" name="BodyText" style="-unity-font: url(&apos;project://database/Assets/UI%20Toolkit/Fonts/Rubik-Medium.ttf?fileID=12800000&amp;guid=b2999f9dd8ce56945b0bfbc0673a8c5c&amp;type=3#Rubik-Medium&apos;); font-size: 14px; -unity-text-align: upper-center; color: rgb(120, 116, 109); margin-top: 8px;" />
         </ui:VisualElement>
-        <BindableNameTextField name="NameInputField" placeholder-text="Name" class="input-field" />
-        <BindableNameTextField name="EmailInputField" placeholder-text="Email" class="input-field" />
-        <BindableNameTextField class="input-field" />
-        <ui:Instance template="Button" name="Button" style="margin-left: auto; margin-right: auto; margin-top: 16px;" />
+        <ui:VisualElement name="InputFieldContainer" style="align-items: center;">
+            <BindableNameTextField name="NameInputField" placeholder-text="Name" class="input-field input-text-field" />
+            <BindableNameTextField name="EmailInputField" placeholder-text="Email" class="input-field input-text-field" />
+            <BindablePasswordTextField placeholder-text="Password" password="true" mask-character="*" class="input-text-field" />
+        </ui:VisualElement>
+        <ui:Instance template="Button" name="Button" style="margin-left: auto; margin-right: auto; margin-top: 16px;">
+            <AttributeOverrides element-name="Label" text="Sign up" />
+        </ui:Instance>
         <ui:Instance template="SkipButton" name="LoginButton" style="margin-left: auto; margin-right: auto; margin-top: 16px;">
-            <AttributeOverrides element-name="Label" text="LogIn" />
+            <AttributeOverrides element-name="Label" text="Log in" />
         </ui:Instance>
     </ui:VisualElement>
 </ui:UXML>

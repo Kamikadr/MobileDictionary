@@ -67,22 +67,18 @@
 
 .unity-text-field__input {
     background-color: rgba(0, 0, 0, 0);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    border-top-width: 0;
-    border-bottom-width: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .placeholder {
@@ -97,5 +93,63 @@
     padding-bottom: 0;
     font-size: 14px;
     -unity-font: url('project://database/Assets/UI%20Toolkit/Fonts/Rubik-Regular.ttf?fileID=12800000&guid=31643f4a30592094cbcd6d87153f61ba&type=3#Rubik-Regular');
-    color: rgba(120, 116, 109, 255);
+    color: rgb(120, 116, 109);
+}
+
+.input-text-field {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 16px;
+    margin-bottom: 0;
+    width: 343px;
+    height: 53px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-left-color: rgb(190, 186, 179);
+    border-right-color: rgb(190, 186, 179);
+    border-top-color: rgb(190, 186, 179);
+    border-bottom-color: rgb(190, 186, 179);
+}
+
+.unity-text-field__password-eye {
+    position: absolute;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    top: 14.5px;
+    bottom: 14.5px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.unity-text-field__password-eye__icon {
+    background-color: rgba(0, 0, 0, 0);
+    width: 24px;
+    height: 24px;
+    background-image: url('project://database/Assets/UI%20Toolkit/Icons/visibility%201%20(2).png?fileID=2800000&guid=b59403f169f721946938ba54e148f4d3&type=3#visibility 1 (2)');
 }
