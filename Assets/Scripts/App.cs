@@ -9,7 +9,8 @@ public class App : MonoBehaviour
 {
     private BaseViewModel _activeScreen;
 
-    [Inject] IntroViewModel _introView;
+    [Inject] IntroViewModel _introViewModel;
+    [Inject] LogInViewModel _logInViewModel;
 
 
     private void Awake()
@@ -18,16 +19,30 @@ public class App : MonoBehaviour
     }
     private void Start()
     {
-        ShowView(_introView);
+        ShowView(_logInViewModel);
     }
     private void OnEnable()
     {
+        _logInViewModel.OnSignUp += OnSignUp;
+        _logInViewModel.OnLoginBackClick += OnLoginBack;
+    }
+
+    private void OnLoginBack(object sender, EventArgs e)
+    {
+        ShowView(_introViewModel);
+    }
+
+    private void OnSignUp(object sender, EventArgs e)
+    {
         
     }
+
     private void OnDisable()
     {
         
     }
+
+
 
     private void ShowView(BaseViewModel viewModel)
     {

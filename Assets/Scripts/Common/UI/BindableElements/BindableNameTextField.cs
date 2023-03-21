@@ -25,6 +25,11 @@ public class BindableNameTextField : BindableTextField
         Placeholder.AddToClassList(PlaceholderClassName);
         contentContainer.Add(Placeholder);
     }
+
+    public void SetPlaceholderVisible(bool value) 
+    {
+        Placeholder.style.display = value ? DisplayStyle.Flex : DisplayStyle.None;
+    }
     public new class UxmlFactory : UxmlFactory<BindableNameTextField, UxmlTraits>
     {
     }

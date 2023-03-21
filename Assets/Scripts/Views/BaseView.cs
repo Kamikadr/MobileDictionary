@@ -14,16 +14,6 @@ namespace Views
         [Inject] private IBindableElementsFactory _bindableElementsFactory;
         [Inject] private TBindingContext _viewModel;
 
-        private void OnEnable()
-        {
-            BindingContext.OnShow += Show;
-            BindingContext.OnHide += Hide;
-        }
-        private void OnDisable()
-        {
-            BindingContext.OnShow -= Show;
-            BindingContext.OnHide -= Hide;
-        }
         private void Show(object sender, EventArgs args) 
         {
             RootVisualElement.style.display = DisplayStyle.Flex;

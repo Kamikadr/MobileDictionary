@@ -7,19 +7,17 @@ namespace ViewModels
 {
     public class BaseViewModel : ViewModel
     {
+        private bool _isActive;
 
-        public event EventHandler OnShow;
-        public event EventHandler OnHide;
-       
-
+        public bool IsActive => _isActive;
 
         public void Show() 
         {
-            OnShow?.Invoke(this, EventArgs.Empty);
+            _isActive = true;
         }
         public void Hide() 
         {
-            OnHide?.Invoke(this, EventArgs.Empty);
+            _isActive = false;
         }
 
     }

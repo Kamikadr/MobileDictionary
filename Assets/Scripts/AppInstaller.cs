@@ -13,7 +13,9 @@ public class AppInstaller: MonoInstaller
         Container.Bind<IBindableElementsFactory>().FromInstance(new CustomBindableFactory()).AsSingle();
         Container.Bind<IntroViewModel>()
             .FromInstance(new IntroViewModel()).AsSingle();
-        
+        Container.Bind<LogInViewModel>()
+            .FromInstance(new LogInViewModel()).AsSingle();
+
     }
 
 }

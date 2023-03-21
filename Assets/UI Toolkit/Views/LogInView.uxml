@@ -4,23 +4,27 @@
     <ui:Template name="SkipButton" src="project://database/Assets/UI%20Toolkit/Controls/SkipButton.uxml?fileID=9197481963319205126&amp;guid=74c36ec9ecdfe4a41a9f7f4702577270&amp;type=3#SkipButton" />
     <Style src="project://database/Assets/UI%20Toolkit/Styles/controls.uss?fileID=7433441132597879392&amp;guid=37bedc4a07c545443bd454d1ba284584&amp;type=3#controls" />
     <Style src="project://database/Assets/UI%20Toolkit/Styles/login-view.uss?fileID=7433441132597879392&amp;guid=22e756fdc3ca5aa4eb50842a7580cf7a&amp;type=3#login-view" />
-    <ui:VisualElement name="Screen" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);">
-        <ui:Instance template="CircleBackButton" name="CircleBackButton" style="position: absolute; top: 60px; left: 15px;" />
+    <BindableElements.BindableScreenPage name="LoginScreen" binding-activity-path="IsActive" style="width: 100%; height: 100%;">
+        <ui:VisualElement name="Background" picking-mode="Ignore" style="background-color: rgb(255, 255, 255); position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+        <ui:Instance template="CircleBackButton" name="CircleBackButton" style="position: absolute; top: 60px; left: 15px;">
+            <AttributeOverrides element-name="Button" command="BackCommand" />
+        </ui:Instance>
         <ui:VisualElement name="LoginImage" picking-mode="Ignore" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/Sprites/LogInSprite.png?fileID=2800000&amp;guid=198848817873935458af42cfc92aa5f1&amp;type=3#LogInSprite&apos;); width: 343px; height: 253px; margin-left: auto; margin-right: auto; margin-top: 102px;" />
         <ui:VisualElement name="TextContainer" style="margin-top: 16px;">
             <ui:Label text="Sing up" display-tooltip-when-elided="true" name="Title" style="-unity-font: url(&apos;project://database/Assets/UI%20Toolkit/Fonts/Rubik-Regular.ttf?fileID=12800000&amp;guid=31643f4a30592094cbcd6d87153f61ba&amp;type=3#Rubik-Regular&apos;); font-size: 24px; letter-spacing: -5px; -unity-text-align: upper-center; color: rgb(60, 58, 54);" />
             <ui:Label text="Create your account" display-tooltip-when-elided="true" name="BodyText" style="-unity-font: url(&apos;project://database/Assets/UI%20Toolkit/Fonts/Rubik-Medium.ttf?fileID=12800000&amp;guid=b2999f9dd8ce56945b0bfbc0673a8c5c&amp;type=3#Rubik-Medium&apos;); font-size: 14px; -unity-text-align: upper-center; color: rgb(120, 116, 109); margin-top: 8px;" />
         </ui:VisualElement>
         <ui:VisualElement name="InputFieldContainer" style="align-items: center;">
-            <BindableNameTextField name="NameInputField" placeholder-text="Name" class="input-field input-text-field" />
-            <BindableNameTextField name="EmailInputField" placeholder-text="Email" class="input-field input-text-field" />
-            <BindablePasswordTextField placeholder-text="Password" password="true" mask-character="*" class="input-text-field" />
+            <BindableNameTextField name="NameInputField" placeholder-text="Name" binding-value-path="Name" class="input-field input-text-field" />
+            <BindableNameTextField name="EmailInputField" placeholder-text="Email" binding-value-path="Email" class="input-field input-text-field" />
+            <BindablePasswordTextField placeholder-text="Password" password="true" mask-character="*" name="PasswordInputField" class="input-text-field" />
         </ui:VisualElement>
         <ui:Instance template="Button" name="Button" style="margin-left: auto; margin-right: auto; margin-top: 16px;">
             <AttributeOverrides element-name="Label" text="Sign up" />
+            <AttributeOverrides element-name="Button" command="SignUpCommand" enabled="true" />
         </ui:Instance>
         <ui:Instance template="SkipButton" name="LoginButton" style="margin-left: auto; margin-right: auto; margin-top: 16px;">
             <AttributeOverrides element-name="Label" text="Log in" />
         </ui:Instance>
-    </ui:VisualElement>
+    </BindableElements.BindableScreenPage>
 </ui:UXML>
