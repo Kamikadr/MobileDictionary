@@ -9,15 +9,19 @@ namespace ViewModels
     {
         private bool _isActive;
 
-        public bool IsActive => _isActive;
+        public bool IsActive 
+        {
+            get => _isActive;
+            private set => Set(ref _isActive, value);
+        }
 
         public void Show() 
         {
-            _isActive = true;
+            IsActive = true;
         }
         public void Hide() 
         {
-            _isActive = false;
+            IsActive = false;
         }
 
     }

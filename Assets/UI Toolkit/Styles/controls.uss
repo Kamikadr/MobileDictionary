@@ -79,6 +79,7 @@
     padding-right: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
+    font-size: 14px;
 }
 
 .placeholder {
@@ -94,6 +95,7 @@
     font-size: 14px;
     -unity-font: url('project://database/Assets/UI%20Toolkit/Fonts/Rubik-Regular.ttf?fileID=12800000&guid=31643f4a30592094cbcd6d87153f61ba&type=3#Rubik-Regular');
     color: rgb(120, 116, 109);
+    -unity-text-align: middle-left;
 }
 
 .input-text-field {

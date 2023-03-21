@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityMvvmToolkit.Core.Interfaces;
 
 namespace BindableElements
 {
-    public class BindableScreenPage : VisualElement
+    public class BindableScreenPage : VisualElement, IBindableUIElement
     {
-        public string BindingActivityPath;
+        public string BindingActivityPath { get; set; }
 
         public new class UxmlFactory : UxmlFactory<BindableScreenPage, UxmlTraits>
         {
