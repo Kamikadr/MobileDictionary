@@ -1,0 +1,82 @@
+.dialog {
+    width: 90%;
+    height: 55px;
+}
+
+.dialog__header {
+    flex-direction: row;
+    padding-left: 24px;
+    padding-right: 40px;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dialog__background {
+    flex-grow: 1;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+    right: 22px;
+    bottom: 0;
+    width: 90%;
+    height: 50px;
+}
+
+.dialog__background--tip {
+    background-color: rgba(0, 152, 219, 0.8);
+}
+
+.dialog__background--help {
+    background-color: rgba(0, 148, 179, 0.8);
+}
+
+.dialog__header__icon {
+    width: 110px;
+    height: 110px;
+}
+
+.dialog__header__label {
+    color: rgb(255, 255, 255);
+    font-size: var(--font-size-h2);
+}
+
+.dialog__content {
+    min-height: 394px;
+}
+
+.dialog__content__label {
+    font-size: var(--font-size-h5);
+    color: rgb(116, 118, 120);
+    white-space: normal;
+    -unity-text-align: middle-left;
+}
+
+.dialog__close-button {
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    position: absolute;
+    right: 0;
+}
+
+.dialog__close-button__icon {
+    width: 20px;
+    height: 20px;
+    background-image: url('project://database/Assets/UI%20Toolkit/Icons/Icon-X.png?fileID=21300000&guid=c281c244ae1f1d24ab10453e56eb8106&type=3#Icon-X');
+    -unity-background-image-tint-color: rgb(112, 112, 112);
+}

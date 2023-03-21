@@ -1,3 +1,4 @@
+using Common.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,10 +17,11 @@ namespace ViewModels
         private string _email;
         private string _password;
 
+        private IDialogService _dialogService;
 
-        [Inject]
-        public LogInViewModel() 
+        public LogInViewModel(IDialogService dialogService) 
         {
+            _dialogService = dialogService;
             SignUpCommand = new Command(SignUp);
             SignInCommand = new Command(LogIn);
             BackCommand = new Command(Back);
@@ -51,6 +53,7 @@ namespace ViewModels
             if( string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password)) 
             {
                 //Dialog Secvice
+                _dialogService.ShowErrorDialog("Не все поля заполнены");
                 return;
             }
 
