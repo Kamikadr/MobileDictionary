@@ -45,6 +45,5 @@ namespace BindableUIElementWrappers
 
             _isPasswordVisible = !_isPasswordVisible;
         }
-        public void Initialize() { }
     }
 }

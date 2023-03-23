@@ -1,11 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="Button" src="project://database/Assets/UI%20Toolkit/Controls/Button.uxml?fileID=9197481963319205126&amp;guid=7dba5a8110e87974da3316346c62c5b2&amp;type=3#Button" />
     <Style src="project://database/Assets/UI%20Toolkit/Styles/controls.uss?fileID=7433441132597879392&amp;guid=37bedc4a07c545443bd454d1ba284584&amp;type=3#controls" />
-    <BindableElements.BindableScreenPage style="width: 100%; height: 100%;">
+    <BindableElements.BindableScreenPage style="width: 100%; height: 100%; align-items: center;">
         <ui:VisualElement name="Background" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgb(255, 255, 255);" />
         <BindablePasswordTextField placeholder-text="Введите слово" name="Search" class="input-text-field" style="margin-left: auto; margin-right: auto; margin-top: 60px; margin-bottom: 0;" />
         <ui:VisualElement name="Content" />
-        <ui:Instance template="Button" name="Button" style="position: absolute; bottom: 114px; left: 16px; right: 16px;">
+        <ui:Instance template="Button" name="Button" style="position: absolute; bottom: 114px;">
             <AttributeOverrides element-name="Label" text="Add to Dictionary" />
         </ui:Instance>
     </BindableElements.BindableScreenPage>

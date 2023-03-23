@@ -11,6 +11,11 @@ public class App : MonoBehaviour
 
     [Inject] IntroViewModel _introViewModel;
     [Inject] LogInViewModel _logInViewModel;
+    [Inject] DictionaryViewModel _dictionaryViewModel;
+    [Inject] TrainingViewModel _trainingViewModel;
+    [Inject] VideoViewModel _videoViewModel;
+
+    [Inject] BottomBarViewModel _bottomBarViewModel;
 
 
     private void Awake()
@@ -41,7 +46,8 @@ public class App : MonoBehaviour
 
     private void OnSignUp(object sender, EventArgs e)
     {
-        
+        ShowView(_dictionaryViewModel);
+        ShowSubView(_bottomBarViewModel);
     }
 
     private void OnDisable()
@@ -60,4 +66,13 @@ public class App : MonoBehaviour
         viewModel.Show();
         _activeScreen = viewModel;
     }
+    private void ShowSubView(BaseViewModel viewModel) 
+    {
+        viewModel.Show();
+    }
+    private void HideSubView(BaseViewModel viewModel) 
+    {
+        viewModel.Show();
+    }
+
 }
