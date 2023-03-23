@@ -1,11 +1,11 @@
 using UnityEngine.UIElements;
 using UnityMvvmToolkit.Core.Interfaces;
 
-public class IntroInfoContainer : VisualElement, IBindableUIElement
+public class BindableIntroInfoContainer : VisualElement, IBindableUIElement
 {
     public string BindingActivePagePath { get; set; }
 
-    public new class UxmlFactory : UxmlFactory<IntroInfoContainer, UxmlTraits>
+    public new class UxmlFactory : UxmlFactory<BindableIntroInfoContainer, UxmlTraits>
     {
     }
 
@@ -19,7 +19,7 @@ public class IntroInfoContainer : VisualElement, IBindableUIElement
         {
             base.Init(visualElement, bag, context);
 
-            var bindablePagination = (IntroInfoContainer)visualElement;
+            var bindablePagination = (BindableIntroInfoContainer)visualElement;
             bindablePagination.BindingActivePagePath = _nextCommandAttribute.GetValueFromBag(bag, context);
 
         }

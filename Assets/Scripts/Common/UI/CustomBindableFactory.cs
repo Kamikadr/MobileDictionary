@@ -19,7 +19,10 @@ public class CustomBindableFactory : BindableElementsFactory
             BindableSwipePage bindableSwipePage => new BindableSwipePageWrapper(bindableSwipePage, objectProvider),
             BindablePasswordTextField bindablePasswordTextField => new BindablePasswordTextFieldWrapper(bindablePasswordTextField, objectProvider),
             BindableNameTextField bindableNameTextField => new BindableNameTextFieldWrapper(bindableNameTextField, objectProvider),
-            
+            BindableIntroInfoContainer bindableIntroInfoContainer => new BindableIntroInfoContainerWrapper(bindableIntroInfoContainer, objectProvider),
+            BindableVisualElement bindableVisualElement => new BindableVisualElementWrapper(bindableVisualElement, objectProvider),
+
+
             _ => base.Create(bindableUiElement, objectProvider)
         };
     }

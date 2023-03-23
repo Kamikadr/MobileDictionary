@@ -4,10 +4,10 @@ using UnityMvvmToolkit.Core.Interfaces;
 
 public class BindableIntroInfoContainerWrapper: BindablePropertyElement
 {
-    private readonly IntroInfoContainer _bindablePagination;
+    private readonly BindableIntroInfoContainer _bindablePagination;
     private readonly IReadOnlyProperty<int> _pageProperty;
     private VisualElement _currentPage;
-    public BindableIntroInfoContainerWrapper(IntroInfoContainer bindablePagination, IObjectProvider objectProvider) : base(objectProvider)
+    public BindableIntroInfoContainerWrapper(BindableIntroInfoContainer bindablePagination, IObjectProvider objectProvider) : base(objectProvider)
     {
         _bindablePagination = bindablePagination;
 
@@ -20,7 +20,7 @@ public class BindableIntroInfoContainerWrapper: BindablePropertyElement
     }
     private void ShowInfo(int value) 
     {
-        if (value >= 0 && value <= _bindablePagination.childCount)
+        if (value >= 0 && value <= _bindablePagination.childCount - 1)
         {
             if (_currentPage != null)
             {

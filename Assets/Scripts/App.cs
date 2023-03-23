@@ -23,8 +23,15 @@ public class App : MonoBehaviour
     }
     private void OnEnable()
     {
+        _introViewModel.OnLoginScreen += OnLoginScreen;
+
         _logInViewModel.OnSignUp += OnSignUp;
         _logInViewModel.OnLoginBackClick += OnLoginBack;
+    }
+
+    private void OnLoginScreen(object sender, EventArgs e)
+    {
+        ShowView(_logInViewModel);
     }
 
     private void OnLoginBack(object sender, EventArgs e)

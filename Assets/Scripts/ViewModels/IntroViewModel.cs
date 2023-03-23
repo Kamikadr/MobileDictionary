@@ -10,7 +10,6 @@ namespace ViewModels
     public class IntroViewModel : BaseViewModel
     {
         private int _currentPage;
-
         public int CurrentPage
         {
             get => _currentPage;
@@ -23,7 +22,7 @@ namespace ViewModels
             }
         }
 
-        public bool IsLastPage => CurrentPage == 3;
+        public bool IsLastPage => CurrentPage == 2;
 
         public event EventHandler OnLoginScreen;
         public IntroViewModel()
@@ -45,6 +44,9 @@ namespace ViewModels
         }
         public void PreviousPage() => CurrentPage--;
 
-        public void NextScreen() { }
+        public void NextScreen() 
+        {
+            OnLoginScreen?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

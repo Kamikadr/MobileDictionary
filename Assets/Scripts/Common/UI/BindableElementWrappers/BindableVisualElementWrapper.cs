@@ -1,7 +1,7 @@
 using UnityMvvmToolkit.Core;
 using UnityMvvmToolkit.Core.Interfaces;
 
-namespace BindableElementWrappers
+namespace BindableUIElementWrappers
 {
     public class BindableVisualElementWrapper : BindablePropertyElement
     {
