@@ -12,12 +12,12 @@ namespace Common.Services
 
         public void ShowErrorDialog()
         {
-            throw new System.NotImplementedException();
+            _dialogsView.ErrorDialog.ShowErrorDialogAsync("ERROR");
         }
 
         public void ShowErrorDialog(string text)
         {
-            _dialogsView.ErrorDialog.Show(text);
+            _dialogsView.ErrorDialog.ShowErrorDialogAsync(text).Forget();
         }
     }
 }
