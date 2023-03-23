@@ -1,4 +1,5 @@
 using BindableElements;
+using BindableElementWrappers;
 using BindableUIElementWrappers;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ public class CustomBindableFactory : BindableElementsFactory
         {
             BindablePagination bindablePagination => new BindablePagenationWrapper(bindablePagination, objectProvider),
             BindableSwipePage bindableSwipePage => new BindableSwipePageWrapper(bindableSwipePage, objectProvider),
+            IntroInfoContainer introInfoContainer => new BindableIntroInfoContainerWrapper(introInfoContainer, objectProvider),
+            BindableVisualElement bindableVisualElement => new BindableVisualElementWrapper(bindableVisualElement, objectProvider),
 
             _ => base.Create(bindableUiElement, objectProvider)
         };
