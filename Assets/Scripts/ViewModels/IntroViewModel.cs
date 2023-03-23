@@ -11,24 +11,40 @@ namespace ViewModels
     {
         private int _currentPage;
 
-        public int CurrentPage 
-        { 
+        public int CurrentPage
+        {
             get => _currentPage;
-            set => Set(ref _currentPage, value);
+            set  
+            {
+                if (Set(ref _currentPage, value))
+                {
+                    OnPropertyChanged(nameof(IsLastPage));
+                }
+            }
         }
 
+        public bool IsLastPage => CurrentPage == 3;
+
         public event EventHandler OnLoginScreen;
-         public IntroViewModel() 
+        public IntroViewModel()
         {
             NextPageCommand = new Command(NextPage);
             PreviousPageCommand = new Command(PreviousPage);
+            NextScreenCommand = new Command(NextScreen);
+
         }
 
         public ICommand NextPageCommand { get; }
         public ICommand PreviousPageCommand { get; }
+        public ICommand NextScreenCommand { get; }
 
 
-        private void NextPage() => CurrentPage++;
+        private void NextPage()
+        {
+            CurrentPage++;
+        }
         public void PreviousPage() => CurrentPage--;
+
+        public void NextScreen() { }
     }
 }
