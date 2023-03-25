@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Views;
-
-public class BottomBarView : BaseView<BottomBarViewModel>
+using ViewModels;
+namespace Views
 {
-    
+    public class BottomBarView : BaseView<BottomBarViewModel>
+    {
+
+    }
 }

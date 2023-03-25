@@ -1,0 +1,26 @@
+.meaning-item {
+    width: 343px;
+    height: auto;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(190, 186, 179);
+    border-right-color: rgb(190, 186, 179);
+    border-top-color: rgb(190, 186, 179);
+    border-bottom-color: rgb(190, 186, 179);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.meaning-item__label {
+    white-space: normal;
+    font-size: 14px;
+    -unity-font: url('project://database/Assets/UI%20Toolkit/Fonts/Rubik-Regular.ttf?fileID=12800000&guid=31643f4a30592094cbcd6d87153f61ba&type=3#Rubik-Regular');
+}

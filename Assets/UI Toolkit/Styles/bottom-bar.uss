@@ -1,0 +1,76 @@
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 98px;
+    border-left-color: rgb(190, 186, 179);
+    border-right-color: rgb(190, 186, 179);
+    border-top-color: rgb(190, 186, 179);
+    border-bottom-color: rgb(190, 186, 179);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+.bottom-bar__button-container {
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.bottom-bar__button__icon--active {
+    -unity-background-image-tint-color: rgba(227, 86, 42, 255);
+}
+
+.bottom-bar__button__icon--unactive {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
+}
+
+.bottom-bar__button__icon {
+    width: 19.5px;
+    height: 16.5px;
+}
+
+.bottom-bar__button__label {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    -unity-font: url('project://database/Assets/UI%20Toolkit/Fonts/Rubik-Medium.ttf?fileID=12800000&guid=b2999f9dd8ce56945b0bfbc0673a8c5c&type=3#Rubik-Medium');
+    margin-top: 3.75px;
+}
+
+.bottom-bar__button__label--active {
+    color: rgba(227, 86, 42, 255);
+}
+
+.bottom-bar__button__label--unactive {
+    color: rgba(190, 186, 179, 255);
+}
+
+.bottom-bar__button {
+    background-color: rgba(255, 255, 255, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}

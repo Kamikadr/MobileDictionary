@@ -7,7 +7,7 @@ namespace ViewModels
 {
     public class BaseViewModel : ViewModel
     {
-        private bool _isActive;
+        private bool _isActive = false;
 
         public bool IsActive 
         {

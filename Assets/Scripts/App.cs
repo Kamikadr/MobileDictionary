@@ -24,7 +24,8 @@ public class App : MonoBehaviour
     }
     private void Start()
     {
-        ShowView(_logInViewModel);
+        ShowView(_introViewModel);
+        HideSubView(_bottomBarViewModel);
     }
     private void OnEnable()
     {
@@ -32,6 +33,37 @@ public class App : MonoBehaviour
 
         _logInViewModel.OnSignUp += OnSignUp;
         _logInViewModel.OnLoginBackClick += OnLoginBack;
+
+        _bottomBarViewModel.OnDictionaryView += OnDictionaryView;
+        _bottomBarViewModel.OnTrainingView += OnTrainingView;
+        _bottomBarViewModel.OnVideoView += OnVideoView;
+    }
+
+    private void OnVideoView(object sender, EventArgs e)
+    {
+        if (_videoViewModel.IsActive)
+        {
+            return;
+        }
+        ShowView(_videoViewModel);
+    }
+
+    private void OnTrainingView(object sender, EventArgs e)
+    {
+        if(_trainingViewModel.IsActive)
+        {
+            return;
+        }
+        ShowView(_trainingViewModel);
+    }
+
+    private void OnDictionaryView(object sender, EventArgs e)
+    {
+        if(_dictionaryViewModel.IsActive)
+        {
+            return;
+        }
+        ShowView(_dictionaryViewModel);
     }
 
     private void OnLoginScreen(object sender, EventArgs e)
@@ -72,7 +104,7 @@ public class App : MonoBehaviour
     }
     private void HideSubView(BaseViewModel viewModel) 
     {
-        viewModel.Show();
+        viewModel.Hide();
     }
 
 }

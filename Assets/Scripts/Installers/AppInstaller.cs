@@ -19,7 +19,17 @@ public class AppInstaller: MonoInstaller
         Container.Bind<IntroViewModel>()
             .FromInstance(new IntroViewModel()).AsSingle();
         Container.Bind<LogInViewModel>().
-            FromInstance(new LogInViewModel(dialogService)).AsSingle(); ;
+            FromInstance(new LogInViewModel(dialogService)).AsSingle();
+
+        Container.Bind<DictionaryViewModel>()
+            .FromInstance(new DictionaryViewModel()).AsSingle();
+
+        Container.Bind<TrainingViewModel>()
+            .FromInstance(new TrainingViewModel()).AsSingle();
+        Container.Bind<VideoViewModel>()
+            .FromInstance(new VideoViewModel()).AsSingle();
+        Container.Bind<BottomBarViewModel>()
+            .FromInstance(new BottomBarViewModel()).AsSingle();
     }
 
 }

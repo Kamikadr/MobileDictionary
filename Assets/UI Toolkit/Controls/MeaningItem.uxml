@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/meaning-item.uss?fileID=7433441132597879392&amp;guid=aff83ebea3213de45994bbc8a19ae487&amp;type=3#meaning-item" />
+    <ui:VisualElement name="MeaningItem" class="meaning-item" style="margin-top: 10px; width: auto;">
+        <ui:Label text="The practice or skill of preparing food by combining, mixing, and heating ingredients." display-tooltip-when-elided="true" name="MeaningText" class="meaning-item__label" style="color: rgb(0, 0, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+        <ui:Label text="Example: he developed an interest in cooking." display-tooltip-when-elided="true" name="ExampleText" class="meaning-item__label" style="margin-top: 8px; color: rgb(0, 0, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
