@@ -28,13 +28,13 @@
                 </BindableIntroInfoContainer>
             </BindableSwipePage>
             <BindableElements.BindablePagination amount-of-points="3" next-event="NextPage" previous-event="PreviousPage" name="Pagination" picking-mode="Ignore" binding-active-page-path="CurrentPage" class="pagenation" style="width: 52px;" />
-            <BindableVisualElement style="position: absolute; bottom: 50px;">
+            <BindableVisualElement name="NextButton" style="position: absolute; bottom: 50px;">
                 <ui:Instance template="Button" name="NextButton">
                     <AttributeOverrides element-name="Label" text="Next" />
                     <AttributeOverrides element-name="Button" command="NextPageCommand" />
                 </ui:Instance>
             </BindableVisualElement>
-            <BindableVisualElement binding-visibility-path="IsLastPage" style="position: absolute; bottom: 50px;">
+            <BindableVisualElement binding-visibility-path="IsLastPage" name="NextScreenButton" style="position: absolute; bottom: 50px;">
                 <ui:Instance template="Button" name="NextButton">
                     <AttributeOverrides element-name="Label" text="Let&apos;s Start" />
                     <AttributeOverrides element-name="Button" command="NextScreenCommand" />

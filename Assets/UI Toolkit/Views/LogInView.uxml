@@ -25,6 +25,7 @@
         </ui:Instance>
         <ui:Instance template="SkipButton" name="LoginButton" style="margin-left: auto; margin-right: auto; margin-top: 16px;">
             <AttributeOverrides element-name="Label" text="Log in" />
+            <AttributeOverrides element-name="SkipButton" command="SignInCommand" />
         </ui:Instance>
     </BindableElements.BindableScreenPage>
 </ui:UXML>

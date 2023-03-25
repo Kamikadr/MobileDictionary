@@ -243,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: a58c309eeb327ac4996e8b132ba794ca, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 7a4794a3e62866640a6652547800d60a, type: 3}
   m_SortingOrder: 0
 --- !u!1 &174061054
 GameObject:
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: a58c309eeb327ac4996e8b132ba794ca, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 3c59e79972187254e98b857766fce5d7, type: 3}
-  m_SortingOrder: 3
+  m_SortingOrder: 0
 --- !u!1 &528375308
 GameObject:
   m_ObjectHideFlags: 0
