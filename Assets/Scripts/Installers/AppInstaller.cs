@@ -11,6 +11,7 @@ using Zenject;
 public class AppInstaller: MonoInstaller
 {
     [SerializeField] DialogService dialogService;
+    [SerializeField] WebViewService webViewService;
     public override void InstallBindings()
     {
         Container.Bind<IDialogService>().FromInstance(dialogService).AsSingle();
@@ -21,13 +22,14 @@ public class AppInstaller: MonoInstaller
         Container.Bind<LogInViewModel>().
             FromInstance(new LogInViewModel(dialogService)).AsSingle();
 
+
         Container.Bind<DictionaryViewModel>()
             .FromInstance(new DictionaryViewModel()).AsSingle();
 
         Container.Bind<TrainingViewModel>()
             .FromInstance(new TrainingViewModel()).AsSingle();
         Container.Bind<VideoViewModel>()
-            .FromInstance(new VideoViewModel()).AsSingle();
+            .FromInstance(new VideoViewModel(webViewService)).AsSingle();
         Container.Bind<BottomBarViewModel>()
             .FromInstance(new BottomBarViewModel()).AsSingle();
     }

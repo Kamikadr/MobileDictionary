@@ -15,11 +15,11 @@ namespace ViewModels
             private set => Set(ref _isActive, value);
         }
 
-        public void Show() 
+        public virtual void Show() 
         {
             IsActive = true;
         }
-        public void Hide() 
+        public virtual void Hide() 
         {
             IsActive = false;
         }
